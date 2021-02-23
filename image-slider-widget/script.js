@@ -1,5 +1,62 @@
 $(function(){
 
+    let interval;
+    let isRunning = true;
+
+    function displayImgs(){
+        clickNum = 0;
+        interval = setInterval(function(){
+        let newImg = document.createElement('div');
+        let r = Math.floor(Math.random()*225);
+        let b = Math.floor(Math.random()*225);
+        let g = Math.floor(Math.random()*225);
+        newImg.style.width = "100px";
+        newImg.style.height = "100px";
+        newImg.style.background = `RGB(${r}, ${g}, ${b})`;
+        newImg.addEventListener('click', onOff);
+        boxs.appendChild(newImg);
+        }, 1000)
+    }
+
+displayImgs();
+
+function onOff(){
+    if(isRunning){
+        isRunning = false;
+        clearInterval(interval);
+    }else{
+        isRunning = true;
+        displayImgs();
+    }
+}
+
+    // let $indivBox = $("#individualBox");
+    // function stopDisplay(){
+    //     alert('WORKDIN')
+    //     clickNum++;
+    //     clearInterval(interval);
+    //     if(clickNum >= 2){
+    //         displayImgs();
+    //     }
+    // };
+    // let $individualBox = $(".individualBox");
+
+    // $individualBox
+    //     .on(`click`, stopDisplay)
+
+    // $indivBox
+    // .on('click', stopDisplay());
+
+
+    // let $boxs = $(`#box`);
+    // $boxs
+    // .on('click', stopDisplay());
+        
+
+
+
+
+
 // //Build Settings For Slider
 // let width = 720;
 // let animationSpeed = 1500;
@@ -66,10 +123,10 @@ $(function(){
 
 // function backgroundRandom(){
 //     interval = setInterval(function(){
-//         let r = Math.floor(Math.random()*225);
-//         let b = Math.floor(Math.random()*225);
-//         let g = Math.floor(Math.random()*225);
-//         let $backgroundColor = `RGB(${r}, ${g}, ${b})`;
+        // let r = Math.floor(Math.random()*225);
+        // let b = Math.floor(Math.random()*225);
+        // let g = Math.floor(Math.random()*225);
+        // let $backgroundColor = `RGB(${r}, ${g}, ${b})`;
 //         html.css(`background-color`, $backgroundColor);
 //     }, delay);
 // }

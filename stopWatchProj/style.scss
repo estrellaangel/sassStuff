@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(206, 169, 231);
+    color: white;
+    font-weight: bold;
+}
+
+.header{
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px
+}
+
+.times{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    .runningTime{
+        background-color: rgb(70, 224, 64);
+        width: 500px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+    .lapTime{
+        background-color: rgb(241, 75, 75);
+        width: 350px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    button{
+        background-color: black;
+        width: 200px;
+        height: 100px;
+    }
+    
+}

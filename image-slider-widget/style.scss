@@ -8,45 +8,64 @@
 
 h1{
     text-align: center;
-}
-
-#slider{
-    width: 720px;
-    height: 400px;
     margin: auto;
-    overflow: hidden;
 }
 
-.slides{
-    display: block;
-    width: 6000px;
-    height: 400px;
-    padding: 0;
-    margin: 0;
+#boxs{
+    display: flex;
+    flex-wrap: wrap;
+    // position: absolute;
+    flex-direction: row;
+    width: 100%;
+    div{
+        margin: 10px;
+    }
 }
 
-.slide{
-    float: left;
-    width: 720px;
-    list-style: none;
-    height: 400px;
-}
+// .box{
+//     margin: auto;
+//     width: 100px;
+//     height: 100px;
+//     background-color: green;
+// }
 
-.slide1{
-    background-color: red;
-}
-.slide2{
-    background-color: orange;
-}
-.slide3{
-    background-color: yellow;
-}
-.slide4{
-    background-color: green;
-}
-.slide5{
-    background-color: blue;
-}
-.slide6{
-    background-color: violet;
-}
+// #slider{
+//     width: 720px;
+//     height: 400px;
+//     margin: auto;
+//     overflow: hidden;
+// }
+
+// .slides{
+//     display: block;
+//     width: 6000px;
+//     height: 400px;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// .slide{
+//     float: left;
+//     width: 720px;
+//     list-style: none;
+//     height: 400px;
+// }
+
+// .slide1{
+//     background-color: red;
+// }
+// .slide2{
+//     background-color: orange;
+// }
+// .slide3{
+//     background-color: yellow;
+// }
+// .slide4{
+//     background-color: green;
+// }
+// .slide5{
+//     background-color: blue;
+// }
+// .slide6{
+//     background-color: violet;
+// }
