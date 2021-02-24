@@ -13,16 +13,24 @@
         <link rel='stylesheet' href="css/style.css">
     </head>
     <body>
-        <div class="header">Stop Watch</div>
+        <div class="header" id="test">Stop Watch</div>
         <div class="times">
-            <div class="runningTime" id="runningTime"></div>
-            <div class="lapTime" id="lapTime"></div>
+            <div class="runningTime" id="runningTime">
+                <div class="runningTimeSpaces" id="minutes">00</div>
+                <div class="runningTimeSpaces" id="seconds">00</div>
+                <div class="runningTimeSpaces" id="milliseconds">00</div>
+            </div>
+            <div class="lapTime" id="lapTime">
+                <div class="runningTimeSpaces" id="lapMin">00</div>
+                <div class="runningTimeSpaces" id="lapSec">00</div>
+                <div class="runningTimeSpaces" id="lapMil">00</div>
+            </div>
         </div>
         <div class="btns">
-            <button class="lapBtn"></button>
-            <button class="pauseBtn"></button>
+            <button class="lapBtn" id="lapBtn">Lap</button>
+            <button class="pauseBtn" id="pauseBtn">Pause</button>
         </div>
-        <script src='https://code.jquery.com/jquery-3.5.1.js' integrity='sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=' crossorigin='anonymous'></script>
-        <script src=`script.js`></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>

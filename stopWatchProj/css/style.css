@@ -34,6 +34,25 @@ body {
   width: 500px;
   height: 150px;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.times .runningTime div {
+  width: 150px;
+  text-align: center;
+  font-size: 3rem;
+  color: black;
 }
 
 .times .lapTime {
@@ -41,6 +60,16 @@ body {
   width: 350px;
   height: 100px;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .btns {
@@ -57,7 +86,7 @@ body {
 }
 
 .btns button {
-  background-color: black;
+  background-color: white;
   width: 200px;
   height: 100px;
 }
