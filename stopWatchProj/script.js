@@ -80,9 +80,20 @@ function updateTime() {
         ms++;
         if (ms == 100) {sec++; ms = 0;}
         if (sec == 60) {min++; sec = 0;}
-        milliseconds.innerHTML = ms;
-        seconds.innerHTML = sec;
-        minutes.innerHTML = min;
+        if(ms < 10){
+            milliseconds.innerHTML = `: 0${ms}`;
+        }else{
+            milliseconds.innerHTML = `: ${ms}`;
+        }
+        if(sec < 10){
+            seconds.innerHTML = `: 0${sec}`;
+        }else{
+            seconds.innerHTML = `: ${sec}`;
+        }if(min < 10){
+            minutes.innerHTML = `0${min}`;
+        }else{
+            minutes.innerHTML = `${min}`;
+        }
     }, 10)
 }
 
@@ -109,18 +120,30 @@ function lapClearTime() {
         ms = 0;
         sec = 0;
         min = 0;
-        milliseconds.innerHTML = ms;
-        seconds.innerHTML = sec;
-        minutes.innerHTML = min;
-        lapMil.innerHTML = ms;
-        lapSec.innerHTML = sec;
-        lapMin.innerHTML = min;
+        milliseconds.innerHTML = `: 00`;
+        seconds.innerHTML = `: 00`;
+        minutes.innerHTML = '00';
+        lapMil.innerHTML = `: 00`;
+        lapSec.innerHTML = `: 00`;
+        lapMin.innerHTML = '00';
         lapBtn.innerHTML = 'Lap';
         pauseBtn.innerHTML = `Start`;
     } else {
         lapMil.innerHTML = ms;
-        lapSec.innerHTML = sec;
-        lapMin.innerHTML = min;
+        if(ms < 10){
+            lapMil.innerHTML = `: 0${ms}`;
+        }else{
+            lapMil.innerHTML = `: ${ms}`;
+        }
+        if(sec < 10){
+            lapSec.innerHTML = `: 0${sec}`;
+        }else{
+            lapSec.innerHTML = `: ${sec}`;
+        }if(min < 10){
+            lapMin.innerHTML = `0${min}`;
+        }else{
+            lapmin.innerHTML = `${min}`;
+        }
     }
 }
 $('#lapBtn').on('click', lapClearTime)
