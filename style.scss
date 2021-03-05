@@ -1,0 +1,210 @@
+body{
+    font-family: sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        position: fixed;
+        background:#040404 top right no-repeat; //Set up to place url if wanted for the company image
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+}
+
+a{
+    color: rgb(243, 203, 255);
+    text-decoration: none;
+
+    &:hover{
+        color:rgb(250, 234, 255);
+        text-decoration: none;
+    }
+}
+
+
+// Start landing
+#landing{
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/2387532/pexels-photo-2387532.jpeg?cs=srgb&dl=pexels-adrien-olichon-2387532.jpg&fm=jpg) top right;
+    background-size: cover;
+    position: relative;
+
+    &::before{
+        content: "";
+        background: rgba(0,0,0,0.25);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .landing-container{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    h1{
+        margin: 0 0 10px 0;
+        font-size: 64px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        // UPDATE LATER FONT STYLE
+        color: #fff;
+    }
+
+    h2{
+        color: #eee;
+        margin-bottom: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .btn-scroll{
+        transition: .5s;
+        color: grey;
+        animation: up-down 1s ease-in-out infinite alternate-reverse both;
+        i{
+            font-size: 38px;
+        }
+
+        &:hover{
+            color:rgb(250, 234, 255)
+        }
+    }
+}
+// Close Landing
+
+// Start Skills
+#skills{
+    .progress{
+        height: 60px;
+        display: block;
+        background: none;
+        border-radius: 0;
+
+        .skill{
+            padding: 10px 0;
+            margin: 0;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: #fff;
+
+            .val{
+                float: right;
+                font-style: normal;
+            }
+        }
+    }
+
+    .progress-bar-wrap{
+        background-color: rgb(255, 255, 255);
+        height: 10px;
+    }
+
+    .progress-bar{
+        height: 10px;
+        transition: .9s;
+        background-color:rgb(140, 85, 156);
+        
+    }
+}
+// Close Skills
+
+// Start Resume
+.resume{
+    .resume-title{
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color:#fff;
+    }
+
+    .resume-item{
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid rgb(243, 203, 255);
+        position: relative;
+
+        h4{
+            line-height: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            color:rgb(140, 85, 156);
+            margin-bottom: 10px;
+        }
+
+        h5{
+            font-size: 16px;
+            background: rgba(255,255,255,.25);
+            padding: 5px 15px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 10px;
+
+        }
+
+        ul{
+            padding-left: 20px;
+            li{
+                padding-bottom: 0;
+            }
+        }
+
+        &:last-child{ //the last one of these will do this
+            padding-bottom: 0;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            left: -9px;
+            top: 0;
+            background:rgb(250, 234, 255);
+            border: 2px solid rgb(140, 85, 156);
+        }
+    }
+
+}
+// Close Resume
+
+//Start Proj Display
+.displayWork{
+    .section-title{
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color:#fff;
+    }
+
+    img{
+        height: fit-content;
+    }
+}
